@@ -1,0 +1,61 @@
+{
+  "name": "redux-saga-boilerplate",
+  "version": "1.0.0",
+  "description": "It is the boilerplate using the redux-saga.",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./index.js",
+    "dev": "DEBUG=redux-saga-boilerplate:* npm start",
+    "lint": "eslint **/*.js",
+    "build-js": "browserify --extension=jsx public/assets/javascripts/app/app.jsx -t babelify -t uglifyify -o public/assets/javascripts/bundle.js",
+    "watch-js": "watchify --debug --extension=jsx public/assets/javascripts/app/app.jsx -t babelify -o public/assets/javascripts/bundle.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabeliwo/redux-saga-boilerplate.git"
+  },
+  "keywords": [
+    "redux-saga"
+  ],
+  "author": "nabeliwo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabeliwo/redux-saga-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nabeliwo/redux-saga-boilerplate#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-transform-regenerator": "^6.9.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.2",
+    "eslint-plugin-react": "^5.1.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.9.0",
+    "config": "^1.20.4",
+    "handlebars": "^4.0.5",
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "react-router-redux": "^4.0.4",
+    "redux": "^3.5.2",
+    "redux-act": "^0.4.2",
+    "redux-logger": "^2.6.1",
+    "redux-saga": "^0.10.4",
+    "vision": "^4.1.0"
+  }
+}
