@@ -1,30 +1,21 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+
+import Header from '../components/Header';
 
 class App extends Component {
   render() {
     return (
-      <div>hoge</div>
+      <div>
+        <Header text="redux-saga-boilerplate" />
+        {this.props.children}
+      </div>
     );
   }
 }
 
 App.propTypes = {
-
+  children: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({
-  }, dispatch);
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect()(App);

@@ -1,4 +1,4 @@
-# the boilerplate using the redux-saga.
+# the boilerplate using the redux-saga
 
 It is the boilerplate of single page application using the redux-saga.
 It doesn't support server-side rendering.

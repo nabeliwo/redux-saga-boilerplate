@@ -6,6 +6,8 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import App from './containers/App';
+import Index from './components/Index';
+import Counter from './containers/Counter';
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
@@ -14,8 +16,9 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={index} />
-        <Route path="/*" />
+        <IndexRoute component={Index} />
+        <Route path="/counter" component={Counter} />
+        <Route path="/*" component={Index} />
       </Route>
     </Router>
   </Provider>,
