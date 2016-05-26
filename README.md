@@ -22,6 +22,7 @@ $ git clone git@github.com:nabeliwo/redux-saga-boilerplate.git
 
 $ cd redux-saga-boilerplate
 $ npm install
+$ npm run build-js # build bundle.js
 ```
 
 In order to launch the server, and then prepare a config file.
